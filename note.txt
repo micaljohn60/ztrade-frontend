@@ -1,0 +1,6 @@
+category dropdown
+about us
+contact us
+login
+register
+search bar
