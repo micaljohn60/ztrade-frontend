@@ -5,6 +5,7 @@ import ShopProductCard from './ProductCard';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../../actions/ProductAction';
+import ProductCardForIndex from './ProductCardForIndex';
 
 
 
@@ -17,19 +18,19 @@ export default function ProductList({products,...other}){
     },[])
 
     return(
-        <Grid container spacing={1} {...other}>
+        <Grid container >
            
 
-                <div class="row gx-0 mb-2">
+                <div className="row mb-2">
             {
                 loading 
                 ?
                 "Loading"
                 :
                 data.map((product) => (
-                    <Grid key={product.id} item xs={12} sm={6} md={2}>
-                        <ShopProductCard product={product} />
-                    </Grid>
+                    <div key={product.id} className="" >
+                        <ProductCardForIndex product={product} />
+                    </div>
                 ))
             }
             </div>

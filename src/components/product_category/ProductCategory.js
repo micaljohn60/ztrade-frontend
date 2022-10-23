@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { Link } from 'react-router-dom';
 
 const theme = createTheme({
     palette: {
@@ -40,12 +40,12 @@ export default function ProductCategory() {
                 categories.map((category,index)=>{
                     return(
                       <div class="col-lg-2 col-md-6 pb-1">
-                          <div class="cat-item d-flex flex-column mb-4 category-border" style={{padding: "30px",backgroundColor : "#fff"}}>
-                              <p class="text-right">15 Products</p>
-                              <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                          <div class="cat-item d-flex flex-column mb-4 " style={{padding: "30px",backgroundColor : "#fff"}}>
+                              
+                              <Link to="/category/detail" class="cat-img position-relative overflow-hidden mb-3">
                                   <img className="img-fluid" src={images[index]} alt=""/>
-                              </a>
-                              <h5 class="font-weight-semi-bold m-0 text-center">{category}</h5>
+                              </Link>
+                              <h5 class="m-0 text-center">{category} (7)</h5>
                           </div>
                       </div>                
                     )

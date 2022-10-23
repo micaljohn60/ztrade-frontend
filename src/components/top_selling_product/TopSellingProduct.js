@@ -27,9 +27,9 @@ export default function TopSellingProduct({title, carouselID}){
             :
             <>
             <div className="row d-flex  justify-content-between">
-                
+               
                 <Typography variant="h4" component="div" sx={{ml:4}}>
-                {title}
+                <i class="fa-solid fa-square"></i> {title}
                 </Typography>
                 <div>
                     <button className="mr-1 carousel-button" href={"#carouselExampleControls"+carouselID}  role="button" data-slide="prev">

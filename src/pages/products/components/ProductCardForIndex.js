@@ -13,12 +13,12 @@ const ProductImgStyle = styled('img')({
     left:0
   });
 
-ShopProductCard.propTypes = {
+  ProductCardForIndex.propTypes = {
     product: PropTypes.object,
   };
 
 
-export default function ShopProductCard({product,index}){
+export default function ProductCardForIndex({product,index}){
     const [isLiked, setIsLike] = useState(false);
     const {image,title,price} = product
 
@@ -33,9 +33,9 @@ export default function ShopProductCard({product,index}){
 
     return (
           <>
-            <div className="thumb-wrapper">
-                <div className="thumb-unit">
-                  {/* <div className="heading mb-3"><span>{price} MMK</span><span><i class={ isLiked ? "fa-solid fa-heart fa-lg  heart"  : "fa fa-heart-o fa-lg " } onClick={liked}></i></span></div> */}
+            <div className="thumb-wrapper-index">
+                <div className="thumb-unit-index">
+                  
                   <div className="box" style={{backgroundImage : "url(" + image + ")",backgroundSize : "contain",backgroundRepeat:"no-repeat",backgroundPosition:"center"}}></div>
                   <div className="info">
                     <p> {title}</p>

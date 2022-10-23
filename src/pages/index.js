@@ -11,15 +11,17 @@ import sampleBanner from "../images/sample_banner.jpg"
 import SideCategory from "../share/components/SideCategory"
 import Menu from "../share/components/Menu"
 import Footer from "../components/footer/footer"
+    
 
 export default function Index() {
     return (
         <>
         <NavBar />
             <div className="App">
-                <div className="row border-top ">                    
+                                 
                     <Menu/>
-                </div>
+               
+                <Slider/>
                 <div className="hero_area">                    
                     <div className="container-fluid">                        
                         <ProductCategory />
@@ -31,7 +33,10 @@ export default function Index() {
                         <Banner image={sampleBanner} />
                     </div>
                 </div>
-                <Products />
+                <div className="container-fluid">
+                    <Products />
+                </div>
+                
             </div>
             <Footer/>
         </>

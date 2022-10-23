@@ -22,14 +22,14 @@ export default function Store(){
     return(
         <>
             <Typography variant="h4" gutterBottom component="div" sx={{ml:4}}>
-            Store
+            <i class="fa-solid fa-square"></i> Store
             </Typography>
             <OwlCarousel className='owl-theme' loop margin={10} nav items={7}>
                 
                 {
                     images.map((product,index)=>(
                         <div key={product.id} class="item">                            
-                           <img src={images[index]} className="card-img-top p-3" />
+                           <img src={images[index]} className="card-img-top p-3" style={{width:"150px"}}/>
                         </div>
                     ))
                 }

@@ -8,6 +8,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import SideBarCategory from '../product_category/SideProductCategory';
+import NavBar from '../../share/components/NavBar';
 
 const ProductImgStyle = styled('img')({
     top: 0,
@@ -57,6 +58,7 @@ export default function StoreDetail() {
                     "loading"
                     :
                     <>
+                    <NavBar/>
                         <SideBarCategory/>
                         <Typography variant="h4" gutterBottom component="div">
                             Promotions
